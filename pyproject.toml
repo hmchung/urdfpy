@@ -1,0 +1,56 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "urdfpy"
+version = "0.1.0"
+description = "URDF parser and manipulator for Python"
+readme = "README.md"
+license = { text = "MIT License" }
+authors = [
+  { name = "Matthew Matl", email = "matthewcmatl@gmail.com" }
+]
+keywords = ["robotics", "ros", "urdf", "robots", "parser"]
+requires-python = ">=3.6"
+
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 2.7",
+  "Programming Language :: Python :: 3.5",
+  "Programming Language :: Python :: 3.6",
+  "Natural Language :: English",
+  "Topic :: Scientific/Engineering"
+]
+
+dependencies = [
+    "lxml",
+    "networkx",
+    "numpy",
+    "pillow",
+    "pycollada",
+    "pyrender",
+    "scipy",
+    "six",
+    "trimesh",
+]
+
+[project.optional-dependencies]
+dev = [
+    "flake8",
+    "pre-commit",
+    "pytest",
+    "pytest-cov",
+    "tox",
+]
+docs = [
+    "sphinx",
+    "sphinx_rtd_theme",
+    "sphinx-automodapi",
+]
+
+[tool.setuptools]
+packages = ["urdfpy"]
+
